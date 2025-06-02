@@ -6,7 +6,14 @@ jobs:
   build-and-test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4  #Descarga el código
-      - run: npm install           #Instala las dependencias
-      - run: npm test              #Ejecuta pruebas
-      - run: echo "✅Todo listo!!! Taran!!! ✅"  #Mensaje
+      - name: Checkout repository / Descargando el código (simulado)
+        uses: actions/checkout@v4   #Descarga el código
+      
+      - name: Echo Step 1 / Instalando dependencias (simulado)
+        run: echo "npm install"           #Instala las dependencias
+
+      - name: Echo Step 2 / Ejecutando pruebas (simulado) 
+        run: echo "npm test"              #Ejecuta pruebas
+
+      - name: Echo Step 3 / Todo Listo
+        run: echo "✅All done!!! Taran!!! ✅"  #Mensaje
