@@ -1,0 +1,24 @@
+name: Echo Messages on Push to Main
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  echo-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Echo Step 1
+        run: echo "🎉 New commit detected on the main branch!"
+
+      - name: Echo Step 2
+        run: echo "🔄 Starting the workflow..."
+
+      - name: Echo Step 3
+        run: echo "🚀 Performing some checks..."
+
+      - name: Echo Step 4
+        run: echo "✅ Workflow completed successfully!"
