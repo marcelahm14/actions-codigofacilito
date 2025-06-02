@@ -1,0 +1,4 @@
+name: "Hola mundo Perristico"
+on:
+  push:
+    branches: [main]
